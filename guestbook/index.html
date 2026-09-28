@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>留言板 | welcome</title><meta name="author" content="风祁安"><meta name="copyright" content="风祁安"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="欢迎在这里留下你的足迹，说点什么吧。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="留言板">
+<meta property="og:url" content="http://qian528.github.io/guestbook/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="欢迎在这里留下你的足迹，说点什么吧。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ts1.tc.mm.bing.net/th/id/OIP-C.QEZE_1pZtKhnKfRgUgD0pQAAAA?w=193&h=193&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2">
+<meta property="article:published_time" content="2026-09-27T12:20:00.000Z">
+<meta property="article:modified_time" content="2026-09-27T12:20:00.000Z">
+<meta property="article:author" content="风祁安">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ts1.tc.mm.bing.net/th/id/OIP-C.QEZE_1pZtKhnKfRgUgD0pQAAAA?w=193&h=193&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=ImgAns&rm=2"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://qian528.github.io/guestbook/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '留言板',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div id="web_bg" style="background-image: url(https://pic1.zhimg.com/v2-49ddda9deb726c5a054b659732d273c8_r.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://ts1.tc.mm.bing.net/th/id/OIP-C.QEZE_1pZtKhnKfRgUgD0pQAAAA?w=193&amp;h=193&amp;c=8&amp;rs=1&amp;qlt=90&amp;o=6&amp;dpr=1.5&amp;pid=ImgAns&amp;rm=2" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/guestbook/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">welcome</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/guestbook/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">留言板</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><div id="gb-app" data-api="">
+  <div class="gb-intro">
+    <span class="gb-intro-icon"><i class="fas fa-comment-dots"></i></span>
+    <div class="gb-intro-text">
+      <strong>留个言吧</strong>
+      <span>写下昵称和想说的话，留言会按时间展示在这里。邮箱仅用于必要时联系，不会公开展示。</span>
+    </div>
+  </div>
+  <div class="gb-card gb-form">
+    <div class="gb-card-title"><i class="fas fa-pen"></i> 写留言</div>
+    <form id="gb-form" novalidate>
+      <div class="gb-row">
+        <div class="gb-field">
+          <label for="gb-nickname">昵称 <span class="gb-req">*</span></label>
+          <input id="gb-nickname" name="nickname" type="text" maxlength="24" autocomplete="nickname" placeholder="你的昵称（1-24 字）">
+          <p class="gb-err" data-err="nickname"></p>
+        </div>
+        <div class="gb-field">
+          <label for="gb-email">邮箱 <span class="gb-req">*</span></label>
+          <input id="gb-email" name="email" type="email" maxlength="64" autocomplete="email" placeholder="用于必要时联系，不公开">
+          <p class="gb-err" data-err="email"></p>
+        </div>
+      </div>
+      <div class="gb-field">
+        <label for="gb-content">留言内容 <span class="gb-req">*</span></label>
+        <textarea id="gb-content" name="content" rows="4" maxlength="500" placeholder="说点什么吧……（最多 500 字）"></textarea>
+        <div class="gb-field-foot">
+          <p class="gb-err" data-err="content"></p>
+          <span class="gb-counter"><span id="gb-count">0</span>/500</span>
+        </div>
+      </div>
+  <!-- 蜜罐字段：真人看不到，被填写即判定为机器人提交 -->
+  <div class="gb-honeypot" aria-hidden="true">
+    <label for="gb-website">网站</label>
+    <input id="gb-website" name="website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+      <div class="gb-form-foot">
+        <button id="gb-submit" type="submit" class="gb-btn"><i class="fas fa-paper-plane"></i> 发布留言</button>
+        <span id="gb-tip" class="gb-tip"></span>
+      </div>
+    </form>
+  </div>
+  <div class="gb-card gb-list-card">
+    <div class="gb-list-head">
+      <div class="gb-card-title"><i class="fas fa-list-ul"></i> 全部留言 <span id="gb-total" class="gb-total">0</span></div>
+      <div class="gb-sort">
+        <button type="button" class="gb-sort-btn is-active" data-order="desc">最新在前</button>
+        <button type="button" class="gb-sort-btn" data-order="asc">最早在前</button>
+      </div>
+    </div>
+    <div id="gb-list" class="gb-list"></div>
+    <button id="gb-more" type="button" class="gb-btn gb-btn-ghost" hidden>加载更多</button>
+  </div>
+</div>
+<style>
+#gb-app {
+  --gb-theme: var(--default-bg-color, #49b1f5);
+  --gb-card: var(--card-bg, #fff);
+  --gb-text: var(--font-color, #4c4948);
+  --gb-strong: var(--text-highlight-color, #1f2d3d);
+  --gb-border: var(--hr-border, #e3e8f0);
+  --gb-shadow: var(--card-box-shadow, 0 3px 8px 6px rgba(7, 17, 27, .05));
+  --gb-meta: var(--card-meta, #858585);
+  color: var(--gb-text);
+  font-size: 15px;
+}
+#gb-app * { box-sizing: border-box; }
+
+<p>.gb-intro {<br>  display: flex;<br>  gap: 12px;<br>  align-items: flex-start;<br>  padding: 14px 16px;<br>  margin-bottom: 16px;<br>  border-radius: 12px;<br>  border: 1px solid var(–gb-border);<br>  background: var(–gb-card);<br>  box-shadow: var(–gb-shadow);<br>}<br>.gb-intro-icon {<br>  flex: none;<br>  width: 34px; height: 34px;<br>  display: flex; align-items: center; justify-content: center;<br>  border-radius: 50%;<br>  color: #fff;<br>  background: var(–gb-theme);<br>}<br>.gb-intro-text { display: flex; flex-direction: column; gap: 4px; line-height: 1.7; }<br>.gb-intro-text strong { color: var(–gb-strong); font-size: 16px; }<br>.gb-intro-text span { color: var(–gb-meta); font-size: 13px; }</p>
+<p>.gb-card {<br>  padding: 18px 20px;<br>  margin-bottom: 18px;<br>  border-radius: 12px;<br>  border: 1px solid var(–gb-border);<br>  background: var(–gb-card);<br>  box-shadow: var(–gb-shadow);<br>}<br>.gb-card-title {<br>  display: flex; align-items: center; gap: 8px;<br>  margin-bottom: 14px;<br>  font-size: 16px; font-weight: 700;<br>  color: var(–gb-strong);<br>}<br>.gb-card-title i { color: var(–gb-theme); }</p>
+<p>.gb-row { display: flex; gap: 14px; flex-wrap: wrap; }<br>.gb-row .gb-field { flex: 1 1 220px; min-width: 0; }<br>.gb-field { margin-bottom: 14px; }<br>.gb-field label { display: block; margin-bottom: 6px; font-size: 14px; color: var(–gb-strong); }<br>.gb-req { color: #f47466; }<br>#gb-app input, #gb-app textarea {<br>  width: 100%;<br>  padding: 10px 12px;<br>  font-size: 14px;<br>  font-family: inherit;<br>  line-height: 1.6;<br>  color: var(–gb-text);<br>  border: 1px solid var(–gb-border);<br>  border-radius: 8px;<br>  background: var(–gb-card);<br>  transition: border-color .2s, box-shadow .2s;<br>}<br>#gb-app textarea { resize: vertical; min-height: 96px; }<br>#gb-app input:focus, #gb-app textarea:focus {<br>  outline: none;<br>  border-color: var(–gb-theme);<br>  box-shadow: 0 0 0 3px rgba(73, 177, 245, .15);<br>}<br>#gb-app input.is-error, #gb-app textarea.is-error { border-color: #f47466; }<br>.gb-err { min-height: 0; margin: 0; font-size: 12px; color: #f47466; }<br>.gb-err:not(:empty) { margin-top: 6px; }<br>.gb-field-foot { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }<br>.gb-counter { flex: none; font-size: 12px; color: var(–gb-meta); }</p>
+<p>&#x2F;* 蜜罐字段：对真人完全不可见，但仍可被机器人填写 *&#x2F;<br>.gb-honeypot { position: absolute; left: -9999px; width: 0; height: 0; overflow: hidden; }</p>
+<p>.gb-form-foot { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }<br>.gb-btn {<br>  display: inline-flex; align-items: center; gap: 6px;<br>  padding: 9px 20px;<br>  font-size: 14px; font-family: inherit;<br>  color: #fff;<br>  background: var(–gb-theme);<br>  border: none; border-radius: 8px;<br>  cursor: pointer;<br>  transition: filter .2s, opacity .2s;<br>}<br>.gb-btn:hover { filter: brightness(1.08); }<br>.gb-btn[disabled] { opacity: .6; cursor: not-allowed; }<br>.gb-btn-ghost {<br>  color: var(–gb-text);<br>  background: var(–btn-bg, #f2f5f8);<br>  margin: 0 auto;<br>}<br>.gb-tip { font-size: 13px; }<br>.gb-tip.ok { color: #00c4b6; }<br>.gb-tip.bad { color: #f47466; }</p>
+<p>.gb-list-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }<br>.gb-total {<br>  padding: 1px 8px;<br>  font-size: 12px; font-weight: 500;<br>  border-radius: 10px;<br>  color: #fff;<br>  background: var(–gb-theme);<br>}<br>.gb-sort { display: flex; gap: 6px; }<br>.gb-sort-btn {<br>  padding: 5px 12px;<br>  font-size: 13px; font-family: inherit;<br>  color: var(–gb-meta);<br>  background: transparent;<br>  border: 1px solid var(–gb-border);<br>  border-radius: 20px;<br>  cursor: pointer;<br>  transition: all .2s;<br>}<br>.gb-sort-btn.is-active { color: #fff; background: var(–gb-theme); border-color: var(–gb-theme); }</p>
+<p>.gb-list { display: flex; flex-direction: column; gap: 12px; }<br>.gb-item {<br>  display: flex; gap: 12px;<br>  padding: 14px 16px;<br>  border: 1px solid var(–gb-border);<br>  border-radius: 12px;<br>  background: var(–gb-card);<br>  transition: box-shadow .2s, border-color .2s;<br>}<br>.gb-item:hover { border-color: var(–gb-theme); box-shadow: var(–gb-shadow); }<br>.gb-item.is-new { animation: gb-fade .5s ease; }<br>@keyframes gb-fade { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }<br>.gb-avatar {<br>  flex: none;<br>  width: 40px; height: 40px;<br>  display: flex; align-items: center; justify-content: center;<br>  font-size: 17px; font-weight: 700; color: #fff;<br>  border-radius: 50%;<br>  user-select: none;<br>}<br>.gb-body { flex: 1 1 auto; min-width: 0; }<br>.gb-meta { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }<br>.gb-name { font-weight: 700; color: var(–gb-strong); }<br>.gb-floor { font-size: 12px; color: var(–gb-meta); }<br>.gb-time { font-size: 12px; color: var(–gb-meta); margin-left: auto; }<br>.gb-content { white-space: pre-wrap; word-break: break-word; line-height: 1.8; }</p>
+<p>.gb-empty, .gb-loading { padding: 26px 0; text-align: center; color: var(–gb-meta); font-size: 14px; }<br>.gb-empty i { display: block; margin-bottom: 8px; font-size: 22px; color: var(–gb-theme); }</p>
+<p>@media (max-width: 768px) {<br>  .gb-card { padding: 14px; }<br>  .gb-time { margin-left: 0; width: 100%; }<br>}<br></style></p>
+<script>
+(function () {
+  var app = document.getElementById('gb-app');
+  if (!app) return;
+
+  // 后端地址：留空表示与博客同源（由 server/guestbook-server.js 提供）。
+  // 若后端单独部署，把 data-api 改成例如 https://your-api.example.com
+  var API_BASE = (app.dataset.api || '').replace(/\/+$/, '');
+
+  var form = document.getElementById('gb-form');
+  var nicknameEl = document.getElementById('gb-nickname');
+  var emailEl = document.getElementById('gb-email');
+  var contentEl = document.getElementById('gb-content');
+  var websiteEl = document.getElementById('gb-website');
+  var submitBtn = document.getElementById('gb-submit');
+  var tipEl = document.getElementById('gb-tip');
+  var listEl = document.getElementById('gb-list');
+  var totalEl = document.getElementById('gb-total');
+  var moreBtn = document.getElementById('gb-more');
+  var countEl = document.getElementById('gb-count');
+
+  var PAGE_SIZE = 20;
+  var all = [];      // 已加载的全部留言（后端返回顺序）
+  var shown = 0;     // 当前渲染条数
+  var order = 'desc';// desc: 最新在前；asc: 最早在前
+  var floors = {};   // id -> 楼层（按时间正序编号）
+  var mountedAt = Date.now();
+  var freshIds = [];
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function hueOf(name) {
+    var h = 0;
+    for (var i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) % 360;
+    return h;
+  }
+
+  function setTip(msg, type) {
+    tipEl.textContent = msg || '';
+    tipEl.className = 'gb-tip' + (type ? ' ' + type : '');
+  }
+
+  function setError(field, msg) {
+    var box = form.querySelector('[data-err="' + field + '"]');
+    var input = form.querySelector('[name="' + field + '"]');
+    if (box) box.textContent = msg || '';
+    if (input) input.classList.toggle('is-error', !!msg);
+  }
+
+  function clearErrors() {
+    ['nickname', 'email', 'content'].forEach(function (f) { setError(f, ''); });
+  }
+
+  function localValidate(v) {
+    var errors = {};
+    if (!v.nickname) errors.nickname = '请填写昵称';
+    else if (v.nickname.length > 24) errors.nickname = '昵称不能超过 24 个字符';
+
+    if (!v.email) errors.email = '请填写邮箱';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.email)) errors.email = '邮箱格式不正确';
+
+    if (!v.content) errors.content = '留言内容不能为空';
+    else if (v.content.length > 500) errors.content = '留言内容不能超过 500 个字符';
+
+    return errors;
+  }
+
+  function itemHtml(m) {
+    var name = esc(m.nickname);
+    var hue = hueOf(m.nickname || '?');
+    var initial = esc((m.nickname || '?').trim().charAt(0).toUpperCase());
+    return '<div class="gb-item' + (freshIds.indexOf(m.id) > -1 ? ' is-new' : '') + '">' +
+      '<div class="gb-avatar" style="background:hsl(' + hue + ',62%,58%)">' + initial + '</div>' +
+      '<div class="gb-body">' +
+        '<div class="gb-meta">' +
+          '<span class="gb-name">' + name + '</span>' +
+          '<span class="gb-floor">#' + (floors[m.id] || '-') + '</span>' +
+          '<span class="gb-time">' + esc(m.time) + '</span>' +
+        '</div>' +
+        '<div class="gb-content">' + esc(m.content) + '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function render(reset) {
+    if (reset) { listEl.innerHTML = ''; shown = 0; }
+    var slice = all.slice(shown, shown + PAGE_SIZE);
+    slice.forEach(function (m) {
+      listEl.insertAdjacentHTML('beforeend', itemHtml(m));
+    });
+    shown += slice.length;
+    moreBtn.hidden = shown >= all.length;
+    if (!all.length) {
+      listEl.innerHTML = '<div class="gb-empty"><i class="fas fa-comments"></i>还没有人留言，来说第一句吧～</div>';
+    }
+  }
+
+  function computeFloors(items) {
+    var asc = items.slice().sort(function (a, b) { return a.createdAt - b.createdAt; });
+    floors = {};
+    asc.forEach(function (m, i) { floors[m.id] = i + 1; });
+  }
+
+  function load() {
+    listEl.innerHTML = '<div class="gb-loading">留言加载中…</div>';
+    fetch(API_BASE + '/api/messages?order=' + order, { credentials: 'omit' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        all = (data && data.items) || [];
+        totalEl.textContent = (data && data.total) || all.length;
+        computeFloors(all);
+        render(true);
+      })
+      .catch(function () {
+        listEl.innerHTML = '<div class="gb-empty"><i class="fas fa-plug"></i>无法连接到留言服务，请确认后端已启动（<code>npm run guestbook</code>）。</div>';
+        totalEl.textContent = '0';
+      });
+  }
+
+  contentEl.addEventListener('input', function () {
+    countEl.textContent = contentEl.value.length;
+  });
+
+  document.querySelectorAll('.gb-sort-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (btn.classList.contains('is-active')) return;
+      document.querySelectorAll('.gb-sort-btn').forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      order = btn.dataset.order;
+      load();
+    });
+  });
+
+  moreBtn.addEventListener('click', function () { render(false); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    clearErrors();
+    setTip('');
+
+    var payload = {
+      nickname: nicknameEl.value.trim(),
+      email: emailEl.value.trim(),
+      content: contentEl.value.trim(),
+      website: websiteEl.value,
+      ts: mountedAt,
+      elapsed: Date.now() - mountedAt
+    };
+
+    var errors = localValidate(payload);
+    var fields = Object.keys(errors);
+    if (fields.length) {
+      fields.forEach(function (f) { setError(f, errors[f]); });
+      form.querySelector('[name="' + fields[0] + '"]').focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 发布中…';
+
+    fetch(API_BASE + '/api/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (data) {
+          return { status: r.status, data: data };
+        });
+      })
+      .then(function (res) {
+        var data = res.data || {};
+        if (res.status >= 200 && res.status < 300 && data.ok) {
+          setTip('留言发布成功，感谢你的来访！', 'ok');
+          contentEl.value = '';
+          countEl.textContent = '0';
+          if (data.item) freshIds = [data.item.id];
+          load();
+        } else if (data.errors) {
+          Object.keys(data.errors).forEach(function (f) { setError(f, data.errors[f]); });
+          setTip(data.message || '请检查表单填写', 'bad');
+        } else {
+          setTip(data.message || '发布失败，请稍后重试', 'bad');
+        }
+      })
+      .catch(function () {
+        setTip('无法连接到留言服务，请稍后重试', 'bad');
+      })
+      .then(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> 发布留言';
+      });
+  });
+
+  load();
+})();
+</script>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://ts1.tc.mm.bing.net/th/id/OIP-C.QEZE_1pZtKhnKfRgUgD0pQAAAA?w=193&amp;h=193&amp;c=8&amp;rs=1&amp;qlt=90&amp;o=6&amp;dpr=1.5&amp;pid=ImgAns&amp;rm=2" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">风祁安</div><div class="author-info-description">适当怀疑豆包，但不要与之为敌</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/qian528-blog"><i class="fab fa-github"></i><span>点点关注</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/qian528" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1141007680@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/09/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="我的第一篇博客"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://ts1.tc.mm.bing.net/th/id/OIP-C.H0P1k2VJAEKKXjJKHwpPqQHaNJ?w=143&amp;h=103&amp;c=8&amp;rs=1&amp;qlt=90&amp;o=6&amp;dpr=1.5&amp;pid=ImgAns&amp;rm=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一篇博客"/></a><div class="content"><a class="title" href="/2026/09/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="我的第一篇博客">我的第一篇博客</a><time datetime="2026-09-28T13:02:00.000Z" title="发表于 2026-09-28 21:02:00">2026-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/09/24/music/" title="添加一下音乐"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tse1-mm.cn.bing.net/th/id/OIP-C.y33cQFtP84oITIF3jy1POgHaEK?w=312&amp;h=180&amp;c=7&amp;r=0&amp;o=7&amp;dpr=1.5&amp;pid=1.7&amp;rm=3" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="添加一下音乐"/></a><div class="content"><a class="title" href="/2026/09/24/music/" title="添加一下音乐">添加一下音乐</a><time datetime="2026-09-24T12:00:00.000Z" title="发表于 2026-09-24 20:00:00">2026-09-24</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AD%A6%E4%B9%A0%E6%88%90%E9%95%BF/" style="font-size: 1.1em; color: #999">学习成长</a> <a href="/tags/%E5%AD%A6%E6%A0%A1%E6%88%90%E9%95%BF/" style="font-size: 1.1em; color: #999">学校成长</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/09/">
+            <span class="card-archive-list-date">
+              九月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-09-28T14:32:10.014Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 - 2026 By 风祁安</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><script src="/js/meteor.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body></html>
